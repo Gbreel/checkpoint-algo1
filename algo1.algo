@@ -1,0 +1,31 @@
+ALGORITHM checkpoint1
+VAR
+    nbr_ch,nbr_v,space:INTEGER;
+    ch:char;
+    
+BEGIN
+space:=0;
+nbr_ch:=0;
+nbr_v:=0;
+  WHILE (ch<>".") DO
+      read(ch);
+        IF (ch="") THEN
+          space:=space+1;
+        ELSE_IF(ch in [a,e,u,i,o,y])THEN
+          nbr_ch:=nbr_ch+1;
+          nbr_v:=nbr_v+1;
+          BREAK;
+          ELSE
+           nbr_ch:=nbr_ch+1;
+        END_IF
+    END_WHILE 
+    nbr_ch:=nbr_ch-1;
+    space:=space+1;
+    Write("le nombres des charactére :",nbr_ch);
+    Write("le nombre des voyelles :", nbr_v);
+    Write("le nombre des mots:",space); 
+
+    
+
+
+END
